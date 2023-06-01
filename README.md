@@ -41,7 +41,7 @@ NodeJS: https://nodejs.org/en/download
 
 
 # Screenshots
-![cypress-cloud-runner-report](https://github.com/alagamai/cypress-api-automation-framework/blob/main/cypress/images/cypress-cloud-runner-report.png "cypress-cloud-runner-report")
+![cypress-cloud-runner-report](https://github.com/alagamai/cypress-visual-testing-image-snapshot/blob/main/cypress/images/report1.png "cypress-cloud-runner-report")
 
 
 ## Use
