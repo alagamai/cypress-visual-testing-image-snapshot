@@ -13,26 +13,28 @@ NodeJS: https://nodejs.org/en/download
 1. install cypress - sudo npm install cypress
 2. install package - sudo npm install cypress-image-snapshot 
 3. then add the following in cypress.config.js
-	const { defineConfig } = require('cypress');
-	const {
-		addMatchImageSnapshotPlugin,
-	} = require('cypress-image-snapshot/plugin');
 
-	module.exports = defineConfig({
-		// org name cypress-visual-testing
-		projectId: 'ckinux',
-		e2e: {
-			setupNodeEvents(on, config) {
-			// implement node event listeners here
-			addMatchImageSnapshotPlugin(on, config);
+		const { defineConfig } = require('cypress');
+		const {
+			addMatchImageSnapshotPlugin,
+		} = require('cypress-image-snapshot/plugin');
+
+		module.exports = defineConfig({
+			// org name cypress-visual-testing
+			projectId: 'ckinux',
+			e2e: {
+				setupNodeEvents(on, config) {
+				// implement node event listeners here
+				addMatchImageSnapshotPlugin(on, config);
+				},
+				specPattern: 'cypress/e2e/**/*.js',
 			},
-			specPattern: 'cypress/e2e/**/*.js',
-		},
-		env: {
-			APPURL: 'https://demo.nopcommerce.com',
-		},
-	});
+			env: {
+				APPURL: 'https://demo.nopcommerce.com',
+			},
+		});
 4.   add the below code in command.js
+
 	import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 
 	addMatchImageSnapshotCommand();
