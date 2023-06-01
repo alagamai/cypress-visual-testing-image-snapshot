@@ -1,0 +1,17 @@
+{
+	"name": "cypress-visual-test",
+	"version": "1.0.0",
+	"description": "visual regression test",
+	"main": "index.js",
+	"scripts": {
+		"cy:update-snapshot": "sudo npx cypress run --env updateSnapshots=true --record --key 97559428-1221-446a-8721-e18001241183",
+		"cy:ignore-visual-test": "sudo npx cypress run  --env failOnSnapshotDiff=false --record --key 97559428-1221-446a-8721-e18001241183",
+		"cy:run-test": "sudo npx cypress run --record --key 97559428-1221-446a-8721-e18001241183"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cypress": "^12.13.0",
+		"cypress-image-snapshot": "^4.0.1"
+	}
+}
